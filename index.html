@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Interior Design</title>
+ </head>
+
+ <body>
+
+<!-- Sidebar/menu -->
+	<nav class="sidebar">
+		<div class="closem" onclick="closeDiv()">Close Menu</div>
+		<div class="vmenu">
+			<h3>Company Name</h3>
+			<a href="index.html">Home</a>
+			<a href="#maincont" onclick="closeDiv()">Showcase</a>
+			<a href="#services" onclick="closeDiv()">Services</a>
+			<a href="#designers" onclick="closeDiv()">Designers</a>
+			<a href="#packages" onclick="closeDiv()">Packages</a>
+			<a href="#contact" onclick="closeDiv()">Contact</a>
+		</div>
+	</nav>
+
+<!-- opacity over horizontal bar and main content -->
+	<div id="shadow" onclick="closeDiv()"></div>
+	<div id="wrapper">
+<!-- Horizontal bar/menu -->
+	<nav class="hbar">
+		<a onclick="openDiv(); changeOff();">☰</a>
+		<span class="cname">Company Name</span>
+	</nav>
+
+
+<!-- main container -->
+	  <div class="main" id="maincont" onclick="closeDiv()">
+
+		<!-- headline -->
+		<header>
+		 <h1>Interior Design</h1>
+		</header>
+
+		 <h3>Showcase.</h3>
+		 <hr>
+
+	<!-- images container -->
+		<div class="images">
+			<div class="row">
+
+				<div class="column col-r">
+					<img id="myImg1" onclick="openImage1()" src="img/kitchenconcrete.jpg" alt="kitchen" style="width:100%">
+					<img id="myImg3" onclick="openImage3()" src="img/livingroom.jpg" alt="livingroom" style="width:100%">
+					<img id="myImg5" onclick="openImage5()" src="img/diningroom.jpg" alt="diningroom" style="width:100%">
+
+				</div>
+				<div class="column col-l">
+					<img id="myImg2" onclick="openImage2()" src="img/atrium.jpg" alt="atrium" style="width:100%">
+					<img id="myImg4" onclick="openImage4()" src="img/bedroom.jpg" alt="bedroom" style="width:100%">
+					<img id="myImg6" onclick="openImage6()" src="img/livingroom2.jpg" alt="livingroom2" style="width:100%">
+				</div>
+
+			</div>
+		</div>
+
+	<!-- The Modal -->
+		<div id="myModal" class="modal">
+		  <span class="close">&times;</span>
+		  <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<br>
+		<br>
+
+	<!--Services-->
+		<div id="services">
+
+			<h3>Services.</h3>
+			<hr>
+			<p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
+			<p>Some text about our services - what we do and what we offer.
+					We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					Excepteur sint occaecat cupidatat non proident,
+					sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+					adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+					ex ea commodo consequat.</p>
+		</div>
+		<br>
+		<br>
+	<!--Designers-->
+		<div id="designers" class="designers">
+			<h3>Designers.</h3>
+			<hr>
+			<p>The best team in the world.</p>
+			<p>We are lorem ipsum consectetur adipiscing elit,
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+					fugiat nulla pariatur.
+					Excepteur sint occaecat cupidatat non proident,
+					sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+					adipiscing elit, sed do eiusmod tempor incididunt ut labore et quis nostrud
+					exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p><b>Our designers are thoughtfully chosen:</b></p>
+			<div class="row">
+
+				<div class="column">
+					<div class="card">
+						<img src="img/team2.jpg" alt="John" style="width:100%">
+						<div class="contain">
+							<h2>John Doe</h2>
+							<p class="title">CEO & Founder</p>
+							<p>Phasellus eget enim eu lectus faucibus vestibulum.
+ 							 Suspendisse sodales pellentesque elementum.</p>
+						</div>
+					</div>
+				</div>
+
+			 	<div class="column">
+				 	<div class="card">
+					 	<img src="img/team1.jpg" alt="Jane" style="width:100%">
+					 	<div class="contain">
+						 	<h2>Jane Doe</h2>
+						 	<p class="title">Designer</p>
+						 	<p>Phasellus eget enim eu lectus faucibus vestibulum.
+							 	Suspendisse sodales pellentesque elementum.</p>
+					 	</div>
+				 	</div>
+			 	</div>
+
+				 <div class="column">
+					 <div class="card">
+						 <img src="img/team3.jpg" alt="Mike" style="width:100%">
+						 <div class="contain">
+							 <h2>Mike Ross</h2>
+							 <p class="title">Architect</p>
+							 <p>Phasellus eget enim eu lectus faucibus vestibulum.
+								 Suspendisse sodales pellentesque elementum.</p>
+						 </div>
+					 </div>
+				 </div>
+
+			 </div>
+
+		 </div>
+			<br>
+			<br>
+
+		<!-- Packages-->
+		 <div id="packages" class="packages">
+				<h3>Packages.</h3>
+				<hr>
+				<p>Some text our prices. Lorem ipsum consectetur adipiscing elit,
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					ut aliquip ex ea commodo consequat.
+					Duis aute irure</p>
+
+				<div class="row">
+
+					<div class="column col-r">
+						<table>
+						  <tr class="lft">
+						    <th>Basic</th>
+						  </tr>
+						  <tr>
+						    <td>Floorplanning</td>
+						  </tr>
+						  <tr>
+						    <td>10 hours support</td>
+						  </tr>
+						  <tr>
+						    <td>Photography</td>
+						  </tr>
+							<tr>
+						    <td>20% furniture discount</td>
+						  </tr>
+							<tr>
+						    <td>Good deals</td>
+						  </tr>
+							<tr>
+						    <td><span style="font-size: 1.7em;">$ 199</span><br><span style="color:grey;">per room</span></td>
+						  </tr>
+							<tr>
+						    <td style="border-style: none;"><button class="btn defaultl">Sign Up</td>
+						  </tr>
+						</table>
+					</div>
+
+					<div class="column col-l">
+						<table>
+						  <tr class="rght">
+						    <th>Pro</th>
+						  </tr>
+						  <tr>
+						    <td>Floorplanning</td>
+						  </tr>
+						  <tr>
+						    <td>50 hours support</td>
+						  </tr>
+						  <tr>
+						    <td>Photography</td>
+						  </tr>
+							<tr>
+						    <td>50% furniture discount</td>
+						  </tr>
+							<tr>
+						    <td>GREAT deals</td>
+						  </tr>
+							<tr>
+						    <td> <span style="font-size: 1.7em;">$ 249</span> <br><span style="color:grey;">per room</span></td>
+						  </tr>
+							<tr>
+						    <td style="border-style: none;"><button class="btn defaultr">Sign Up</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			<br>
+			<br>
+
+		<!-- Contact-->
+			<div id="contact" class="contact">
+				<h3>Contacts.</h3>
+				<hr>
+				<p>Do you want us to style your home?
+					Fill out the form and fill me in with the details :)
+					We love meeting new people!
+				</p>
+
+				<div class="contain form-group">
+					<label for="Name"><b>Name</b></label>
+	    		<input type="text" placeholder="Name" name="Name" required>
+
+	    		<label for="email"><b>Email</b></label>
+	    		<input type="email" placeholder="email" name="email" required>
+
+			    <label for="text"><b>Message</b></label>
+			    <input type="text" placeholder="Message" name="Message" required>
+
+					<button type="submit" class="msgbtn">Send message</button>
+				</div>
+
+			</div>
+
+			<br>
+			<br>
+			<br>
+
+		<footer>
+				Powered by XY
+		</footer>
+
+	 </div>
+
+
+
+
+	</div>
+
+	<script src="js/myScript.js">	</script>
+
+  </body>
+</html>

@@ -1,0 +1,404 @@
+* {
+	box-sizing: border-box
+}
+
+body {
+	margin:0;
+	padding:0;
+  font-family: 'Poppins', sans-serif;
+	background-color:white;
+}
+hr {
+	width:50px;
+	border:5px solid red;
+	border-radius: 5px;
+}
+/*sidebar*/
+.sidebar {
+	top: 0;
+  left: 0;
+	z-index: 4;
+	position: fixed;
+	background: #f44336;
+	width: 300px;
+	height: 100%;
+	color: white;
+	padding: 10px;
+	overflow-x: hidden;
+}
+.sidebar .closem {
+	display:none;
+	position: absolute;
+	width:100%;
+	margin:-10px;
+	padding:7px;
+	font-size: 1.45em;
+	font-weight: bold;
+	text-align: center;
+}
+.sidebar .closem:hover {
+	background:silver;
+	color:black;
+	cursor:pointer;
+}
+.sidebar .vmenu h3 {
+	width:100px;
+	font-size: 1.7em;
+	font-weight: bold;
+	padding:80px 20px 45px 20px;
+}
+.sidebar .vmenu a {
+	text-decoration: none;
+	display: block;
+	width:100%;
+	color: white;
+	font-size: 1.25em;
+	font-weight: bold;
+	padding:8px 20px;
+}
+.sidebar .vmenu a:hover {
+	background-color: white;
+	color: black;
+}
+/* opacity over horizontal bar and main content */
+#shadow {
+	top:0;
+	position: absolute;
+	z-index: 3;
+	display:none;
+	overflow: hidden;
+	width: 100%;
+	background-color: black;
+	opacity: 0.5;
+}
+/*horizontal bar*/
+.hbar {
+	top: 0;
+	z-index: 2;
+	position:fixed;
+	display: none;
+	background: #f44336;
+	width: 100%;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	padding:10px;
+}
+.hbar .cname {
+	font-size: 21px;
+	padding:0px 20px;
+	font-weight:lighter;
+}
+.hbar a {
+	display:inline-block;
+	font-size: 21px;
+	text-decoration: none;
+	color: white;
+	padding: 6px 14px;
+}
+.hbar a:hover {
+	background: silver;
+	color: black;
+	cursor:pointer;
+}
+
+/*main content*/
+.main {
+	margin:40px 30px 0 330px;
+	padding: 15px 20px 0 20px;
+}
+.main h1 {
+	font-size: 4.5em;
+	font-weight: bold;
+	color: black;
+	margin: 15px 0;
+}
+.main h3 {
+	font-size: 3.5em;
+	font-weight: bolder;
+	color:#f44336;
+	margin: 15px 0;
+}
+
+/* img galery */
+.main .images .row {
+  padding: 0 4px;
+}
+/* Create two equal columns that sits next to each other */
+.main .images .row .column {
+	float:left;
+  width: 50%;
+}
+.main .images .row .column img {
+	width: 100%;
+  margin-top: 8px;
+  vertical-align: middle;
+}
+.col-l {
+	padding-left: 8px;
+}
+.col-r {
+	padding-right: 8px;
+}
+#myImg1, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+#myImg1:hover, #myImg2:hover, #myImg3:hover, #myImg4:hover, #myImg5:hover, #myImg6:hover {opacity: 1;}
+/* The Modal (background) */
+.main .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  padding-top: 30px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.main .modal .modal-content {
+  margin: auto;
+  display: block;
+  max-width: 75%;
+  height: auto;
+}
+/* Caption of Modal Image */
+.main .modal #caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+/* Add Animation */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  color: #f1f1f1;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*services*/
+.main #services, .main #designers, .main #packages p, .main #contact p{
+	font-size: 15.5px;
+}
+
+/*designers*/
+/* Three columns side by side */
+.main .designers .column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.main .designers .column .card {
+	background-color: #f1f1f1;
+}
+/* Some left and right padding inside the contain */
+.main .designers .contain {
+  padding: 0 16px;
+}
+/* Clear floats*/
+.main .designers .contain::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.main .designers .title {
+  color: grey;
+}
+
+/*Packages.*/
+/* Two columns side by side */
+.main .packages .row {
+  padding: 0 4px;
+}
+/* Create two equal columns that sits next to each other */
+.main .packages .row .column {
+	float:left;
+  width: 50%;
+  margin-top: 8px;
+  vertical-align: middle;
+}
+.main .packages .row .column table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+.main .packages .row .column table th {
+	font-size: 1.6em;
+	font-weight: 100;
+	height:100px;
+	color:white;
+}
+.main .packages .row .column .lft {
+  background-color: grey;
+}
+.main .packages .row .column .rght {
+	background-color: #f44336;
+}
+.main .packages .row .column table th, td {
+	text-align: center;
+	padding: 18px;
+	font-weight: 100;
+}
+.main .packages .row .column td {
+	border-bottom: 1px solid #cecece;
+	font-size: 1.1em;
+}
+.main .packages .row .column table tr {
+	background-color: #f2f2f2;
+}
+.btn {
+	font-size:14px;
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  cursor: pointer;
+}
+.defaultl {
+	background-color: white; color: black;
+}
+.defaultr {
+	background-color: #f44336; color: white;
+}
+.defaultl:hover {
+	background: black;
+	color: white;
+}
+.defaultr:hover {
+	background: black;
+	color: white;
+}
+
+/*contacts*/
+/* Full-width input fields */
+.contact label {
+	font-size: 15.5px;
+}
+.contact .contain input[type=text], .contact .contain input[type=email] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid silver;
+  background: #f1f1f1;
+}
+.contact .contain input[type=text]:focus, .contact .contain input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/*style for the submit button */
+.contact .contain .msgbtn {
+  background-color: #f44336;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.contact .contain .msgbtn:hover {
+  background-color: silver;
+	color: black;
+}
+/* Set a grey background color and center the text of the "sign in" section */
+.contact .contain .signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+footer {
+  margin:0 -50px 0 -50px;
+	padding: 40px 100px;
+	background-color: #f1f1f1;
+	color:black;
+	font-size: 14.5px;
+	text-align: right;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+/*RESPONSIVE sidebar horizontal bar and main */
+
+@media only screen and (max-width: 993px) {
+	.sidebar .closem {
+		display:block;
+	}
+	.hbar {
+		display:block;
+		position:fixed;
+	}
+	.main {
+		margin:40px auto 0 auto;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.sidebar .closem {
+		display:block;
+	}
+	.hbar {
+		display:block;
+		position:fixed;
+	}
+	.main {
+		margin:40px auto 0 auto;
+	}
+	.main .images .row .column {
+    max-width: 100%;
+  }
+	.col-l {
+		padding-left: 0px;
+	}
+	.col-r {
+		padding-right: 0px;
+	}
+	.modal-content {
+    width: 100%;
+  }
+	.main .designers .column {
+     width: 100%;
+     display: block;
+   }
+	.main .packages .row .column {
+    width: 100%;
+  }
+.main .packages .row .col-l {padding-left:0px;}
+.main .packages .row .col-r {padding-right:0px;}
+}
+/*Responsive overflow-y on side bar*/
+@media only screen and (max-height: 470px) {
+	.sidebar {
+		overflow-y: scroll;
+	}
+}
